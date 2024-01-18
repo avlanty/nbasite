@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" text="text/css" href="/static/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
     <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Basketball_Clipart.svg/1024px-Basketball_Clipart.svg.png"/>
     <title>NBA Court - WIP</title>
 </head>
@@ -17,13 +17,20 @@
                 </div><div>
                 </div>
             </div>
-            <div>
-                <img src="https://www.shutterstock.com/image-vector/top-view-basketball-court-line-600nw-2060662517.jpg"></img>
+            <div id="video_tr6XsZVb-ZE">
+                <a href="javascript:void(0)" onclick="playYT('tr6XsZVb-ZE')"></a>
+                <img src="https://www.shutterstock.com/image-vector/top-view-basketball-court-line-600nw-2060662517.jpg" onclick="playYT('tr6XsZVb-ZE')">
             </div>
             <div>
                 <p>Highlight plays from the NBA.</p>
             </div>
         </div>
     </div>
+    <script>
+        function playYT(id){
+            let html='<iframe width="560" height="315" src="https://www.youtube.com/embed/ih0S8B4iXUw?si=-AAZN4EqFHyXiJB8&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+            document.getElementById('video_' +id).innerHTML=html;
+        }
+    </script>
 </body>
 </html>
